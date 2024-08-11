@@ -23,7 +23,7 @@ function App() {
 
     <Home/>
     
-    <Footer footercontent={'©2021-Pizzería Mamma Mia!-Todos los derechos reservados'}/>
+    <Footer footercontent={'©2021 - Pizzería Mamma Mia! - Todos los derechos reservados'}/>
   </div>
   
   
