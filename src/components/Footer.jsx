@@ -1,6 +1,6 @@
 const Footer = (props) => {
     return (
-      <div className='footer'>{props.footercontent}</div>
+      <div className='footer'>{props.footerContent}</div>
     )
 }
   

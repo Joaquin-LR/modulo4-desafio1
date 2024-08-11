@@ -3,9 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-function NavScrollExample(props) {
+// AQUÍ QUISE PROBAR CON Y SIN DESTRUCTURING
+// EN ESTE COMPONENTE SIN, Y EN EL DE "CARDPIZZA" CON
+function NavBar(props) { // FUNCTION CON CamelCase PORQUE SI NO, DA ERROR
   const total = 25000;
-  const token = false; // Puedes cambiar este valor para probar
+  const token = false; //   VALOR POR DEFECTO DE TOKEN, YA QUE EN ESTE DESAFÍO NO HAY LOG IN
   const formattedTotal = total.toLocaleString('es-CL');
 
   return (
@@ -19,24 +21,18 @@ function NavScrollExample(props) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Button variant="outline-light">{props.navhome}</Button>
-            {token ? (
-              <>
-                <Button variant="outline-light">🔒 Profile</Button>
-                <Button variant="outline-light">🔒 Logout</Button>
-              </>
-            ) : (
-              <>
-                <Button variant="outline-light">{props.navlogin}</Button>
-                <Button variant="outline-light">{props.navregister}</Button>
-              </>
-            )}
+
+            <Button variant="outline-light">{props.home}</Button>{/* BOTON HOME */}
+
+            {/* OPERADOR TERNARIO DE SIMULACIÓN */}
+            <Button variant="outline-light">{token ? (props.profile): (props.login)}</Button>
+            <Button variant="outline-light">{token ? (props.logout): (props.register)}</Button>
           </Nav>
-          <Button variant="outline-info">{props.navbutton}{formattedTotal}</Button>
+          <Button variant="outline-info">{props.total}{formattedTotal}</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default NavScrollExample;
+export default NavBar;

@@ -1,9 +1,9 @@
-const Header = ({title, subtitle}) => {
+const Header = ({headerTitle, headerSubtitle}) => {
 
     return (
         <div className="custom-header">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
+            <h1>{headerTitle}</h1>
+            <p>{headerSubtitle}</p>
             <div className="line-header"></div>
         </div>
     );

@@ -1,5 +1,4 @@
 import './App.css'
-
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './components/Home'
@@ -11,22 +10,22 @@ function App() {
     <div className='nav-container'>
       <Navbar 
       navtitle={'¡Pizzería Mamma Mia!'}
-      navhome={'🍕 Home'}
-      navlogin={'🔐 Login'}
-      navregister={'🔐 Register'}
-      navbutton={'🛒 Total: $'}/>
+      home={'🍕 Home'}
+      login={'🔐 Login'}
+      register={'🔐 Register'}
+      profile={'🔒 Profile'}
+      logout={'🔒 Logout'}
+      total={'🛒 Total: $'}/>
     </div>
   
     <Header 
-    title={'¡Pizzería Mamma Mia!'}
-    subtitle={'¡Tenemos las mejores pizzas que podrás encontrar!'}/>
+    headerTitle={'¡Pizzería Mamma Mia!'}
+    headerSubtitle={'¡Tenemos las mejores pizzas que podrás encontrar!'}/>
 
-    <Home/>
+    <Home/> {/* ESTE COMPONENTE SERÁ EL PADRE DE "CardPizza.jsx" */}
     
-    <Footer footercontent={'©2021 - Pizzería Mamma Mia! - Todos los derechos reservados'}/>
+    <Footer footerContent={'©2021 - Pizzería Mamma Mia! - Todos los derechos reservados'}/>
   </div>
-  
-  
   </>
 }
 

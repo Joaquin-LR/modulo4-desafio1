@@ -12,7 +12,7 @@ const Home = () => {
         name="Napolitana" 
         price={5950} 
         ingredients={["mozzarella", "tomates", "jamón", "orégano"]}
-        imagen= {napolitana}
+        imagen={napolitana} // CAMBIÉ "img" POR "imagen" PORQUE AL PARECER ERA PALABRA RESERVADA, O NO SÉ, PERO DABA ERROR
       />
       <CardPizza 
         name="Española" 
